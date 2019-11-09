@@ -1,9 +1,7 @@
-const Sequelize = require("sequelize");
-
 import { alquiler_model } from '../modelos/Alquiler';
 import { color_model } from '../modelos/Color';
-import { dpto_model } from '../modelos/Departamento';
-import { dist_model } from '../modelos/Distrito';
+import { departamento_model } from '../modelos/Departamento';
+import { distrito_model } from '../modelos/Distrito';
 import { dueniovehiculo_model } from '../modelos/Dueniovehiculo';
 import { imagen_model } from '../modelos/Imagen';
 import { marca_model } from '../modelos/Marca';
@@ -35,20 +33,24 @@ export const conexion = new Sequelize(
 // Otra forma de conectarse por Sequelize
 // export const conexion2 = new Sequelize('mysql://root:root@localhost:3306/aulas')
 
-export const Tusuario:any = tusuario_model(conexion);
-export const Persona:any = persona_model(conexion);
-export const Dueniovehiculo:any = dueniovehiculo_model(conexion);
 export const Alquiler:any = alquiler_model(conexion);
+export const Color:any = color_model(conexion);
+export const Departamento:any = departamento_model( conexion);
+export const Distrito:any = distrito_model(conexion);
+export const Dueniovehiculo:any = dueniovehiculo_model(conexion);
+export const Imagenvehiculo:any = imagen_model(conexion);
+export const Marca:any = marca_model(conexion);
+export const Modelo:any = modelo_model(conexion);
+export const Persona:any = persona_model(conexion);
+export const Provincia:any = provincia_model(conexion);
+export const Tusuario:any = tusuario_model(conexion);
+export const Tipovehiculo:any = tvehiculo_model(conexion);
+export const Usuario:any = usuario_model(conexion);
 export const Valoracion:any = valoracion_model(conexion);
 export const Vehiculo:any = vehiculo_model(conexion);
-export const Imagenvehiculo:any = imagen_model(conexion);
-export const Distrito:any = distrito_model(conexion);
-export const Color:any = color_model(conexion);
-export const Modelo:any = modelo_model(conexion);
-export const Marca:any = marca_model(conexion);
-export const Provincia:any = provincia_model(conexion);
-export const Departamento:any = departamento_model(conexion);
 
+Tusuario.hasMany( , { foreignKey: "pab_id" });
+Aula.belongsTo(Tusuario, { foreignKey: "pab_id" });
 
 
 

@@ -1,7 +1,7 @@
 // MODELO valoracion
 import { DataTypes } from 'sequelize';
 
-export let valoracion_modelo = (sequelize: any) => {
+export let valoracion_model = (sequelize: any) => {
 
   let valoracion = sequelize.define('t_valoracion', {
     valo_id: {

@@ -1,7 +1,7 @@
 // MODELO provincia
 import { DataTypes } from 'sequelize';
 
-export let provincia_modelo = (sequelize: any) => {
+export let provincia_model = (sequelize: any) => {
 
   let prov = sequelize.define('t_provincia', {
     prov_id: {

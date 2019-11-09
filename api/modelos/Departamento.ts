@@ -1,7 +1,7 @@
 // MODELO departamento
 import { DataTypes } from 'sequelize';
 
-export let dpto_model = (sequelize: any) => {
+export let departamento_model = (sequelize: any) => {
 
   let dpto = sequelize.define('t_departamento', {
     dpto_id: {
