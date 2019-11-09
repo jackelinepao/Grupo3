@@ -1,7 +1,7 @@
 //modelo aula
 import { DataTypes, Sequelize } from 'sequelize';
 
-export let persona_model = (sequelize:any) =>{
+export let alquiler_model = (sequelize:any) =>{
     let alquiler = sequelize.define('t_alquiler', {
         alqui_id: {
             type: DataTypes.INTEGER,
