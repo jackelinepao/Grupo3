@@ -1,37 +1,24 @@
-import {Sequelize, Model} from 'sequelize';
+import { DataTypes } from 'sequelize';
 
 
-export var  tipoVehiculo_model = (sequelize:Sequelize, type:any)=>{
+export let tvehiculo_model = (sequelize: any) => {
 
-    class tipoVehiculo_model extends Model {}
-
-   
-
-   tipoVehiculo_model.init ({
-         tve_id:{
-
-            type:type.INTEGER,
-            primaryKey:true,
+    let tvehiculo = sequelize.define('t_tipovehiculo', {
+        tve_id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
             autoIncrement: true,
-            allowNull:false
+            allowNull: false
         },
-        tve_nom:{
-            type:type.STRING(45)
-        },
-      
+        tve_nom: {
+            type: DataTypes.STRING(45),
+            allowNull: false
+        },{
+            tableName: 't_tipovehiculo',
+            timesstamps: true
 
+        });
 
-        },
-        {
-            sequelize,
-            modelName: 't_vehiculo',
-            timestamps:false
+    return tvehiculo;
 
-        
-        
-
-    });
-    
-    return tipoVehiculo_model;
-  
 }

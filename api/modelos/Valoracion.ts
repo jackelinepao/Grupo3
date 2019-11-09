@@ -1,9 +1,9 @@
 // MODELO valoracion
 import { DataTypes } from 'sequelize';
 
-export let valo_modelo = (sequelize: any) => {
+export let valoracion_modelo = (sequelize: any) => {
 
-  let valo = sequelize.define('t_valo', {
+  let valoracion = sequelize.define('t_valoracion', {
     valo_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -19,10 +19,10 @@ export let valo_modelo = (sequelize: any) => {
         allowNull: true
       },
   }, {
-    tableName: 't_valo',
+    tableName: 't_valoracion',
     timestamps: true
   });
 
-  return valo;
+  return valoracion;
 
 }

@@ -1,38 +1,23 @@
-import {Sequelize, Model} from 'sequelize';
+import { DataTypes} from 'sequelize';
 
 
-export var  tipoUsuario_model = (sequelize:Sequelize, type:any)=>{
+export let  tusuario_model = (sequelize:any)=>{
 
-    class tipoUsuario_model extends Model {}
-
-   
-
-   tipoUsuario_model.init ({
+   let tusuario = sequelize.define('Tipo_usuario',{
          tusu_id:{
-
-            type:type.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey:true,
             autoIncrement: true,
             allowNull:false
         },
         tusu_desc:{
-            type:type.STRING(45)
+            type: DataTypes.STRING(45),
+            allowNull: false
         },
         
-
-
-
-        },
-        {
-            sequelize,
-            modelName: 't_usuario',
-            timestamps:false
-
-        
-        
-
+        },{
+          tableName: 'Tipo_usuario',
+          timestamps: true
     });
-    
-    return tipoUsuario_model;
-  
+    return tusuario;
 }

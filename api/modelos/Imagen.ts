@@ -3,7 +3,7 @@ import { DataTypes } from 'sequelize';
 
 export let imagen_model = (sequelize: any) => {
 
-  let aula = sequelize.define('t_imagenvehiculo', {
+  let imagen = sequelize.define('t_imagenvehiculo', {
     ima_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,

@@ -1,9 +1,9 @@
 // MODELO provincia
 import { DataTypes } from 'sequelize';
 
-export let prov_modelo = (sequelize: any) => {
+export let provincia_modelo = (sequelize: any) => {
 
-  let prov = sequelize.define('t_prov', {
+  let prov = sequelize.define('t_provincia', {
     prov_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -15,7 +15,7 @@ export let prov_modelo = (sequelize: any) => {
       allowNull: true
     },
   }, {
-    tableName: 't_prov',
+    tableName: 't_provincia',
     timestamps: true
   });
 

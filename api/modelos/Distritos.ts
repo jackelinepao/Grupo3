@@ -1,9 +1,9 @@
 // MODELO distrito
 import { DataTypes } from 'sequelize';
 
-export let dist_modelo = (sequelize: any) => {
+export let dist_model = (sequelize: any) => {
 
-  let dist = sequelize.define('t_dist', {
+  let dist = sequelize.define('t_distrito', {
     dist_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -15,7 +15,7 @@ export let dist_modelo = (sequelize: any) => {
       allowNull: true
     },
   }, {
-    tableName: 't_dist',
+    tableName: 't_distrito',
     timestamps: true
   });
 

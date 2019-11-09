@@ -1,35 +1,22 @@
 import {Sequelize, Model} from 'sequelize';
 
 
-export var  duenioVehiculo_model = (sequelize:Sequelize, type:any)=>{
+export let  dueniovehiculo_model = (sequelize:Sequelize, type:any)=>{    
 
-    class duenioVehiculo_model extends Model {}
-
-   
-
-   duenioVehiculo_model.init ({
-         dve_id:{
-
-            type:type.INTEGER,
-            primaryKey:true,
-            autoIncrement: true,
-            allowNull:false
-        },
-       
-           
-
-
-
-        },
-        {
-            sequelize,
-            modelName: 't_duenioVehiculo',
-            timestamps:false
-
-        
-        
-
-    });
+    let dvehi = sequelize.define('t_dueniovehiculo',
+    {        
+              dve_id:{
+                 type:type.INTEGER,
+                 primaryKey:true,
+                 autoIncrement: true,
+                 allowNull:false
+             },        
+             },
+             {
+                 tableName: 't_dueniovehiculo',
+                 timestamp: true
+             });
+              
     
-    return duenioVehiculo_model;
+    return dvehi;
 }

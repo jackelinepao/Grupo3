@@ -1,9 +1,9 @@
 // MODELO MODELO
 import { DataTypes } from 'sequelize';
 
-export let nodelo_model = (sequelize: any) => {
+export let modelo_model = (sequelize: any) => {
 
-  let nodelo = sequelize.define('t_nodelo', {
+  let modelo = sequelize.define('t_modelo', {
     mod_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,

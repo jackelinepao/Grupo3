@@ -1,9 +1,9 @@
 // MODELO departamento
 import { DataTypes } from 'sequelize';
 
-export let dpto_modelo = (sequelize: any) => {
+export let dpto_model = (sequelize: any) => {
 
-  let dpto = sequelize.define('t_dpto', {
+  let dpto = sequelize.define('t_departamento', {
     dpto_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -15,7 +15,7 @@ export let dpto_modelo = (sequelize: any) => {
       allowNull: true
     },
   }, {
-    tableName: 't_dpto',
+    tableName: 't_departamento',
     timestamps: true
   });
 
