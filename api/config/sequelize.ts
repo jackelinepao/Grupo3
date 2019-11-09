@@ -48,3 +48,12 @@ export const Tipovehiculo:any = tvehiculo_model(conexion);
 export const Usuario:any = usuario_model(conexion);
 export const Valoracion:any = valoracion_model(conexion);
 export const Vehiculo:any = vehiculo_model(conexion);
+
+Persona.hasMany(Usuario, {foreignKey: "per_id"}),
+Usuario.belongsTo(Persona, {foreignKey: "per_id"})
+
+Usuario.hasMany(Alquiler, {foreignKey: "usu_id"}),
+Alquiler.belongsTo(Usuario, {foreignKey: "usu_id"})
+
+Vehiculo.hasMany(Alquiler,{foreignKey: "ve_id"}),
+Alquiler.belongsTo(Vehiculo, {foreignKey: "ve_id"})
