@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import { sequelize } from '../config/sequelize'
+import { conexion } from '../config/sequelize'
 let bodyParser = require('body-parser');
 
 export class Server {
@@ -29,7 +29,7 @@ export class Server {
   start() {
     this.app.listen(this.puerto, () => {
       console.log(`Servidor OK en el puerto ${this.puerto}`);
-      sequelize.sync({force: false}).then(()=>{
+      conexion.sync({force: false}).then(()=>{
         console.log("Base de datos correctamente");
         
       })
