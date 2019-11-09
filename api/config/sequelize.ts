@@ -49,8 +49,12 @@ export const Usuario:any = usuario_model(conexion);
 export const Valoracion:any = valoracion_model(conexion);
 export const Vehiculo:any = vehiculo_model(conexion);
 
-Tusuario.hasMany( , { foreignKey: "pab_id" });
-Aula.belongsTo(Tusuario, { foreignKey: "pab_id" });
+Tusuario.hasMany( Usuario, { foreignKey: "tusu_id" });
+Usuario.belongsTo(Tusuario, { foreignKey: "tusu_id" });
+
+
+
+
 
 
 
