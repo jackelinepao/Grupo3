@@ -1,4 +1,4 @@
-import { DataTypes } from 'sequelize';
+import {DataTypes} from 'sequelize';
 export let  dueniovehiculo_model = (sequelize:any)=>{    
 
     let dvehi = sequelize.define('t_dueniovehiculo',
