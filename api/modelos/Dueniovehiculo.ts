@@ -1,4 +1,4 @@
-import {Sequelize, Model} from 'sequelize';
+import {DataTypes} from 'sequelize';
 
 
 export let  dueniovehiculo_model = (sequelize:Sequelize, type:any)=>{    
@@ -6,7 +6,7 @@ export let  dueniovehiculo_model = (sequelize:Sequelize, type:any)=>{
     let dvehi = sequelize.define('t_dueniovehiculo',
     {        
               dve_id:{
-                 type:type.INTEGER,
+                 type:DataTypes.INTEGER,
                  primaryKey:true,
                  autoIncrement: true,
                  allowNull:false
