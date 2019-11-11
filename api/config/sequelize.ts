@@ -57,3 +57,12 @@ Alquiler.belongsTo(Usuario, {foreignKey: "usu_id"})
 
 Vehiculo.hasMany(Alquiler,{foreignKey: "ve_id"}),
 Alquiler.belongsTo(Vehiculo, {foreignKey: "ve_id"})
+
+Departamento.hasMany(Provincia,{foreignKey:"dpto_id"});
+Provincia.belongsTo(Departamento,{foreignKey:"dpto_id"});
+
+Provincia.hasMany(Distrito,{foreignKey:"prov_id"});
+Distrito.belongsTo(Provincia,{foreignKey:"prov_id"});
+
+Vehiculo.hasMany(Color,{foreignKey:"t_vehiculo"});
+Color.belongsTo(Vehiculo,{foreignKey:"t_vehiculo"});
