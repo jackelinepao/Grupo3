@@ -65,4 +65,30 @@ Usuario.hasMany(Dueniovehiculo,{foreignKey: "usu_id"}),
 Dueniovehiculo.belongsTo(Usuario,{foreignKey: "usu_id"}),
 
 Alquiler.hasMany(Valoracion,{foreignKey: "alqui_id"}),
-Valoracion.belongsTo(Alquiler,{foreignKey: "alqui_id"})
+Valoracion.belongsTo(Alquiler,{foreignKey: "alqui_id"}),
+
+Departamento.hasMany(Provincia,{foreignKey:"dpto_id"}),
+Provincia.belongsTo(Departamento,{foreignKey:"dpto_id"}),
+
+Provincia.hasMany(Distrito,{foreignKey:"prov_id"}),
+Distrito.belongsTo(Provincia,{foreignKey:"prov_id"}),
+
+Distrito.hasMany(Vehiculo,{foreignKey:"dist_id"}),
+Vehiculo.belongsTo(Distrito, {foreignKey:"dist_id"}),
+
+Vehiculo.hasMany(Color,{foreignKey:"color_id"}),
+Color.belongsTo(Vehiculo,{foreignKey:"color_id"}),
+
+Marca.hasMany(Modelo,{foreignKey: "marca_id"}),
+Modelo.belongsTo(Marca,{foreignKey:"marca_id"}),
+
+Vehiculo.hasMany(Imagenvehiculo,{foreignKey: "ve_id"}),
+Imagenvehiculo.belongsTo(Vehiculo,{foreignKey:"ve_id"}),
+
+Tipovehiculo.hasMany(Vehiculo,{foreignKey:"tve_id"}),
+Vehiculo.belongsTo(Tipovehiculo,{foreignKey:"tve_id"}),
+
+Modelo.hasMany(Vehiculo,{foreignKey:"mod_id"}),
+Vehiculo.belongsTo(Modelo,{foreignKey:"mod_id"})
+
+
