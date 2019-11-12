@@ -56,4 +56,13 @@ Usuario.hasMany(Alquiler, {foreignKey: "usu_id"}),
 Alquiler.belongsTo(Usuario, {foreignKey: "usu_id"})
 
 Vehiculo.hasMany(Alquiler,{foreignKey: "ve_id"}),
-Alquiler.belongsTo(Vehiculo, {foreignKey: "ve_id"})
+Alquiler.belongsTo(Vehiculo, {foreignKey: "ve_id"}),
+
+Tusuario.hasMany(Usuario, {foreignKey: "tusu_id"}),
+Usuario.belongsTo(Tusuario, {foreignKey: "tusu_id"}),
+
+Usuario.hasMany(Dueniovehiculo,{foreignKey: "usu_id"}),
+Dueniovehiculo.belongsTo(Usuario,{foreignKey: "usu_id"}),
+
+Alquiler.hasMany(Valoracion,{foreignKey: "alqui_id"}),
+Valoracion.belongsTo(Alquiler,{foreignKey: "alqui_id"})
