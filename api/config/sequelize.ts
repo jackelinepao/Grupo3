@@ -64,5 +64,19 @@ Provincia.belongsTo(Departamento,{foreignKey:"dpto_id"});
 Provincia.hasMany(Distrito,{foreignKey:"prov_id"});
 Distrito.belongsTo(Provincia,{foreignKey:"prov_id"});
 
-Vehiculo.hasMany(Color,{foreignKey:"t_vehiculo"});
-Color.belongsTo(Vehiculo,{foreignKey:"t_vehiculo"});
+Vehiculo.hasMany(Color,{foreignKey:"color_id"});
+Color.belongsTo(Vehiculo,{foreignKey:"color_id"});
+
+Marca.hasMany(Modelo,{foreignKey: "marca_id"});
+Modelo.belongsTo(Marca,{foreignKey:"marca_id"});
+
+Vehiculo.hasMany(Imagenvehiculo,{foreignKey: "ve_id"});
+Imagenvehiculo.belongsTo(Vehiculo,{foreignKey:"ve_id"});
+
+Tipovehiculo.hasMany(Vehiculo,{foreignKey:"tve_id"});
+Vehiculo.belongsTo(Tipovehiculo,{foreignKey:"tve_id"});
+
+Modelo.hasMany(Vehiculo,{foreignKey:"mod_id"});
+Vehiculo.belongsTo(Modelo,{foreignKey:"mod_id"});
+
+
